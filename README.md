@@ -19,10 +19,7 @@ docker-compose up -d
 ### Step 2: Run Prometheus Container
 Run the Prometheus container using the command below:
 ```bash
-docker run --name prometheus -d -p 9090:9090 \
-  --mount type=bind,source=$(pwd)/prometheus.yml,target=/etc/prometheus/prometheus.yml \
-  --network monitoring_network \
-  prom/prometheus
+docker run --name prometheus -d -p 9090:9090 --mount type=bind,source=$(pwd)/prometheus.yml,target=/etc/prometheus/prometheus.yml --network monitoring_network  prom/prometheus
 ```
 ### Step 3: Create Grafana Data Volume
 Create a Docker volume for Grafana:
@@ -32,10 +29,7 @@ docker volume create grafana_data
 ### Step 4: Run Grafana Container
 Run the Grafana container using the following command:
 ```bash
-docker run -d --name=grafana -p 3000:3000 \
-  -v grafana_data:/var/lib/grafana \
-  --network monitoring_network \
-  grafana/grafana
+docker run -d --name=grafana -p 3000:3000 -v grafana_data:/var/lib/grafana --network monitoring_network grafana/grafana
 ```
 ### Step 5: Access Grafana
 Open your web browser and go to:
