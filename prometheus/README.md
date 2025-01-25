@@ -9,6 +9,8 @@ This guide will help you install Prometheus on your system.
 
    ```bash
    nano install_prometheus.sh
+   ```
+   Then, add the following script to the file `install_prometheus.sh`.
 
 2. **Make the script executable**:
    After saving the script, run the following command to make it executable:
