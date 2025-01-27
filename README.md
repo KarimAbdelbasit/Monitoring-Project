@@ -59,5 +59,4 @@ http://<server-ip>:3000
   2- Click on Import.
   3- Enter the ID for the Node Exporter Full dashboard: 1860.
   4- Click Load and follow the prompts to import the dashboard.
-ذذذ```
-ذذ
+  
